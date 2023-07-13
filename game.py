@@ -1,6 +1,6 @@
 import random
 
-mode = input('Blah blah blah!')
+mode = input('Select game mode (E/M/H): ')
 
 if mode == 'E':
     number = random.randint(1, 5)
