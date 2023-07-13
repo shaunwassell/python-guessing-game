@@ -4,14 +4,16 @@ mode = input('Select game mode (E/M/H): ')
 
 if mode == 'E':
     number = random.randint(1, 5)
+    guess = int(input('I have selected a number between 1 and 5. What do you think it is???: '))
 elif mode == 'M':
     number = random.randint(1, 10)
+    guess = int(input('I have selected a number between 1 and 10. What do you think it is???: '))
 else:
     number = random.randint(1, 20)
+    guess = int(input('I have selected a number between 1 and 20. What do you think it is???: '))
 
-guess = int(input('I have selected a number between 1 and 10. Enter your guess: '))
+while guess != number:
+    print(f'Nope, you are wrong!')
+    guess = int(input('Enter another guess: '))
 
-if guess == number:
-    print(f'You are correct! The number was {number}')
-else:
-    print(f'Nope, you are wrong! The number was {number}')
+print(f'Yayyyyyy! The number was {number}')
