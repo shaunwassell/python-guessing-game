@@ -1,7 +1,16 @@
 import random
 
-number = random.randint(1, 10)
-guess = int(input('I have selected a number between 1 and 10. What do you think it is???: '))
+mode = input('Select game mode (E/M/H): ')
+
+if mode == 'E':
+    number = random.randint(1, 5)
+    guess = int(input('I have selected a number between 1 and 5. What do you think it is???: '))
+elif mode == 'M':
+    number = random.randint(1, 10)
+    guess = int(input('I have selected a number between 1 and 10. What do you think it is???: '))
+else:
+    number = random.randint(1, 20)
+    guess = int(input('I have selected a number between 1 and 20. What do you think it is???: '))
 
 while guess != number:
     print(f'Nope, you are wrong!')
