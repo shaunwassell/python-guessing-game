@@ -13,7 +13,10 @@ else:
     guess = int(input('I have selected a number between 1 and 20. What do you think it is???: '))
 
 while guess != number:
-    print(f'Nope, you are wrong!')
+    if guess > number:
+        print(f'Nope, you are wrong! That guess was too high')
+    else:
+        print(f'Nope, you are wrong! That guess was too low')
     guess = int(input('Enter another guess: '))
 
 print(f'Yayyyyyy! The number was {number}')
