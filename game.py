@@ -1,15 +1,19 @@
 import random
+import requests
 
 mode = input('Select game mode (E/M/H): ')
 
 if mode == 'E':
-    number = random.randint(1, 5)
+    response = requests.get('http://www.randomnumberapi.com/api/v1.0/random?min=1&max=5&count=1')
+    number = response.json()[0]
     guess = int(input('I have selected a number between 1 and 5. What do you think it is???: '))
 elif mode == 'M':
-    number = random.randint(1, 10)
+    response = requests.get('http://www.randomnumberapi.com/api/v1.0/random?min=1&max=10&count=1')
+    number = response.json()[0]
     guess = int(input('I have selected a number between 1 and 10. What do you think it is???: '))
 else:
-    number = random.randint(1, 20)
+    response = requests.get('http://www.randomnumberapi.com/api/v1.0/random?min=1&max=20&count=1')
+    number = response.json()[0]
     guess = int(input('I have selected a number between 1 and 20. What do you think it is???: '))
 
 while guess != number:
