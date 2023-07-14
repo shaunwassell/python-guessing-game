@@ -7,5 +7,5 @@ This is a fun little guessing game that allows you to select the difficulty leve
 ### Instructions
 
 1. Clone the repo
-1. Run the command python3 game.py
+1. Run the command `python3 game.py`
 1. Enjoy!
