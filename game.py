@@ -1,6 +1,8 @@
 import random
 import requests
 
+print('Hello and welcome to Shaun\'s Magnificent Guessing Game!')
+
 mode = input('Select game mode (E/M/H): ')
 
 if mode == 'E':
@@ -24,3 +26,5 @@ while guess != number:
     guess = int(input('Enter another guess: '))
 
 print(f'Yayyyyyy! The number was {number}')
+
+print('Thank you for playing! We hope to see you again soon.')
